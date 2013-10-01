@@ -17,8 +17,6 @@ set listchars=tab:>-,trail:-,eol:$,nbsp:%,
 let python_highlight_all=1
 syntax on
 inoremap jj <Esc>
-source $HOME/.vim/plugin/anotherdark.vim
-colorscheme anotherdark
 set tabstop=4
 set shiftwidth=4
 set expandtab
