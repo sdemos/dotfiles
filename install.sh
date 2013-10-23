@@ -30,5 +30,5 @@ then
 fi
 
 echo "Linking Files"
-ln -sf ~/.genconfig/.vim ~/.vim
+ln -sf ~/.genconfig/.vim ~/
 ln -f ~/.genconfig/.*rc* ~/
