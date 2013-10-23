@@ -29,36 +29,6 @@ then
   }
 fi
 
-if [ -f ~/.zshrc ] || [ -h ~/.zshrc ]
-then
-  echo "Moving old .zshrc to .zshrc.pre.sync";
-  mv .zshrc .zshrc.pre.sync;
-fi
-
-if [ -f ~/.vimrc ] || [ -h ~/.vimrc ]
-then
-  echo "Moving old .vimrc to .vimrc.pre.sync";
-  mv .vimrc .vimrc.pre.sync;
-fi
-
-if [ -f ~/.bashrc ] || [ -h ~/.bashrc ]
-then
-  echo "Moving old .bashrc to .bashrc.pre.sync";
-  mv .bashrc .bashrc.pre.sync;
-fi
-
-if [ -d ~/.vim ] || [ -h ~/.vim ]
-then
-  echo "Moving old .vim to .vim.pre.sync";
-  mv -r .vim .vim.pre.sync;
-fi
-
-if [ -f ~/.xinitrc ] || [ -h ~/.xinitrc ]
-then
-  echo "Moving old .xinitrc to .xinitrc.pre.sync";
-  mv .xinitrc .xinitrc.pre.sync;
-fi
-
 echo "Linking Files"
-ln -s ~/.genconfig/.vim ~/.vim
-ln ~/.genconfig/.*rc ~/
+ln -sf ~/.genconfig/.vim ~/.vim
+ln -f ~/.genconfig/.*rc ~/
