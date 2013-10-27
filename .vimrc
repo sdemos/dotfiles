@@ -78,6 +78,7 @@ set shiftwidth=4
 set softtabstop=4
 set scrolloff=5
 set smarttab
+set et
 
 " Autocommands for python
 augroup filetype_python
@@ -104,8 +105,6 @@ augroup filetype_c
     autocmd FileType c :iab mainr cmainabbrev
 augroup END
 
-autocmd FileType c nnoremap
-
 " Autocommands for haskell
 augroup filetype_haskell
     " clear any autocmds for this group already set
@@ -114,3 +113,7 @@ augroup filetype_haskell
     autocmd FileType haskell nnoremap <buffer> <leader>u ^xxx
 augroup END
 
+augroup filetype_make
+    autocmd!
+    autocmd FileType make :set noexpandtab
+augroup END
