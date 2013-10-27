@@ -104,8 +104,6 @@ augroup filetype_c
     autocmd FileType c :iab mainr cmainabbrev
 augroup END
 
-autocmd FileType c nnoremap
-
 " Autocommands for haskell
 augroup filetype_haskell
     " clear any autocmds for this group already set
