@@ -26,10 +26,9 @@ source /usr/local/lib/config/Bash_Profile
 # equivalent. When Solaris is retired we'll revisit this.
 #
 
-
-
 CVSROOT=$HOME/gross
 export CVSROOT
 
 
 /bin/zsh
+logout 

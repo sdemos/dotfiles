@@ -49,7 +49,7 @@ vnoremap <C-A-c> :s/\\<CR[>]//<CR>:nohlsearch<CR>
 
 " general main abbreviations!
 iab cmainr 
-\<CR>int main (int argc, char *argv)
+\<CR>int main (int argc, char **argv)
 \<CR>{
 \<CR>}jkkA;jki<CR>jkhxli
 
