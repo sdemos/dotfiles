@@ -4,13 +4,13 @@ hash git >/dev/null && /usr/bin/env git clone https://github.com/stphndemos/dotf
   exit
 }
 
-ohmyzshyes = true;
+ohmyzshyes=true;
 
 if [ "$1" ]
 then
   if [ "$1" == "--no-oh-my-zsh" ]
   then
-    ohmyzshyes = false;
+    ohmyzshyes=false;
   fi
   if [ "$1" == "-h" || "$1" == "--help"]
   then
@@ -30,5 +30,10 @@ then
 fi
 
 echo "Linking Files"
-ln -sf ~/.genconfig/.vim ~/
+ln -sf ~/.genconfig/.vim_backup ~/.vim
 ln -f ~/.genconfig/.*rc* ~/
+
+hash git >/dev/null && /usr/bin/env git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle || {
+  echo "git not installed (how did you get here?)"
+  exit
+}
