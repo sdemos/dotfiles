@@ -35,6 +35,9 @@ set nocompatible
 " first, set a leader
 let mapleader = " "
 
+" set up pathogen to autoload stuff
+execute pathogen#infect()
+
 " source bundles and vundle
 source ~/.vimrc_vundle
 source ~/.vimrc_bundles
@@ -49,7 +52,7 @@ vnoremap <C-A-c> :s/\\<CR[>]//<CR>:nohlsearch<CR>
 
 " general main abbreviations!
 iab cmainr 
-\<CR>int main (int argc, char *argv)
+\<CR>int main (int argc, char **argv)
 \<CR>{
 \<CR>}jkkA;jki<CR>jkhxli
 
@@ -98,7 +101,8 @@ augroup filetype_c
     " uncomment the line you are on
     autocmd FileType c :nnoremap <buffer> <localleader>u ^xxx
     autocmd FileType c :set cin
-    autocmd FileType c :set et
+    " autocmd FileType c :set et
+	autocmd FileType c :set noexpandtab
     autocmd FileType c :set ai
     autocmd FileType c :set cino=Ls\:0t0(0
     autocmd FileType c :iab mainr cmainabbrev

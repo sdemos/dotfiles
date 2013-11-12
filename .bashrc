@@ -33,3 +33,4 @@ export CVSROOT
 
 
 /bin/zsh
+logout
