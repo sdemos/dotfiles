@@ -33,7 +33,6 @@ echo "Linking Files"
 ln -sf ~/.genconfig/.vim_backup ~/.vim
 ln -sf ~/.genconfig/.xmonad_git ~/.xmonad
 ln -f ~/.genconfig/.*rc* ~/
-ln -f ~/.genconfig/.xsession ~/
 ln -f ~/.genconfig/.Xdefaults ~/
 
 hash git >/dev/null && /usr/bin/env git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle || {
