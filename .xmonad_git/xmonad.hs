@@ -4,9 +4,10 @@ import System.Posix.Env (getEnv)
 import Data.Maybe (maybe)
 
 import XMonad
+import XMonad.Hooks.SetWMName
 
 main = xmonad $ defaultConfig
 	{ borderWidth		= 0
 	, terminal			= "urxvt" 
-	, modMask			= mod4Mask
+    , startupHook       = setWMName "LG3D"
 	}
