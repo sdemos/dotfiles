@@ -28,7 +28,6 @@ export EDITOR="vim"
 
 alias ls='ls --color=auto'
 alias py3='python3'
-
-export EDITOR='vim'
+alias power='acpi'
 
 export _JAVA_AWT_WM_NONREPARENTING=1
