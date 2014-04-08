@@ -1,3 +1,9 @@
+! .Xdefaults
+! author: Stephen Demos
+
+! change term name
+URxvt*termName: rxvt-256color
+
 ! transparency - true or false (default)
 URxvt*transparent: false
 
@@ -25,6 +31,33 @@ URxvt*font: xft:Bitstream Vera Sans Mono:pixelsize=11:antialias=false:hinting=tr
 URxvt*boldFont: xft:Bitstream Vera Sans Mono:bold:pixelsize=11:antialias=false:hinting=true
 !URxvt*font: xft:Liberation Mono:pixelsize=11:antialias=false:hinting=true
 !URxvt*boldFont: xft:Liberation Nono:bold:pixelsize=11:antialias=false:hinting=true
+!URxvt*font: xft:inconsolata:pixelsize=11:antialias=false:hinting=true
+!URxvt*boldFont: xft:incolsolata:bold:pixelsize=11:antialias=false:hinting=true
 
 ! fuck the scroll bar
 URxvt*scrollBar: false
+
+! add some perl extensions
+URxvt*perl-ext-common: default, matcher
+URxvt*urlLauncher: google-chrome
+URxvt*matcher*button: 1
+
+! make the lines save for a while
+URxvt*saveLines: 4095
+
+URxvt*color0:       #3f3f3f
+URxvt*color1:       #903030
+URxvt*color2:       #00b45a
+URxvt*color3:       #bfbf00
+URxvt*color4:       #2090e0
+URxvt*color5:       #dc8cc3
+URxvt*color6:       #60c0c0
+URxvt*color7:       #ececec
+URxvt*color8:       #709080
+URxvt*color9:       #e04040
+URxvt*color10:      #4def4d
+URxvt*color11:      #f0df8f
+URxvt*color12:      #4186de
+URxvt*color13:      #ec93d3
+URxvt*color14:      #93e0e3
+URxvt*color15:      #ffffff

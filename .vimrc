@@ -3,6 +3,8 @@
 " author: Stephen Demos <stphndemos@gmail.com> "
 """"""""""""""""""""""""""""""""""""""""""""""""
 
+color demos
+
 set nocompatible
 
 " first, set a leader
