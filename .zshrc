@@ -10,7 +10,7 @@ CASE_SENSITIVE="true"
 ZSH_THEME="demos"
 plugins=(git battery cp colored-man git-extras github lol safe-paste themes tmux systemd yum common-aliases debian gitfast pip python svn virtualenvwrapper wd)
 source $ZSH/oh-my-zsh.sh
-export PATH=$PATH:/usr/lib64/qt-3.3/bin:/usr/local/bin:/usr/bin:/bin:/home/demos/bin:/usr/local/sbin:/usr/sbin:/usr/local/netbeans-8.0rc1/bin
+export PATH=$PATH:/usr/lib64/qt-3.3/bin:/usr/local/bin:/usr/bin:/bin:/home/demos/bin:/usr/local/sbin:/usr/sbin:/usr/local/netbeans-8.0rc1/bin:/home/demos/.cabal/bin
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
 HISTSIZE=1000
@@ -28,7 +28,6 @@ export EDITOR="vim"
 
 alias ls='ls --color=auto'
 alias py3='python3'
-
-export EDITOR='vim'
+alias power='acpi'
 
 export _JAVA_AWT_WM_NONREPARENTING=1

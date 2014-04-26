@@ -1,0 +1,10 @@
+.*.sw*
+cabal.sandbox.config
+.cabal-sandbox
+dist
+*.so
+*.class
+*.o
+*.tar*
+*.sqlite
+*.si

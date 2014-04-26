@@ -7,7 +7,7 @@ import XMonad
 import XMonad.Hooks.SetWMName
 
 main = xmonad $ defaultConfig
-	{ borderWidth		= 0
-	, terminal			= "urxvt" 
+    { borderWidth       = 0
+    , terminal          = "uxterm" 
     , startupHook       = setWMName "LG3D"
-	}
+    }

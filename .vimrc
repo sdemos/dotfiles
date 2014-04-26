@@ -3,7 +3,7 @@
 " author: Stephen Demos <stphndemos@gmail.com> "
 """"""""""""""""""""""""""""""""""""""""""""""""
 
-color demos
+color demos_xterm
 
 set nocompatible
 
