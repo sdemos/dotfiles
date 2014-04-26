@@ -15,6 +15,7 @@ then
   if [ "$1" == "-h" || "$1" == "--help"]
   then
     echo "usage: ./install.sh [--no-oh-my-zsh] [-h] [--help]"
+    exit
   fi
 fi
 
@@ -34,8 +35,13 @@ ln -sf ~/.genconfig/.vim_backup ~/.vim
 ln -sf ~/.genconfig/.xmonad_git ~/.xmonad
 ln -f ~/.genconfig/.*rc* ~/
 ln -f ~/.genconfig/.Xdefaults ~/
+ln -f ~/.genconfig/.Xresources ~/
 
 hash git >/dev/null && /usr/bin/env git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle || {
+  echo "git not installed (how did you get here?)"
+  exit
+}
+hash git >/dev/null && /usr/bin/env git config --global core.excludesfile ~/.gitignore_global || {
   echo "git not installed (how did you get here?)"
   exit
 }

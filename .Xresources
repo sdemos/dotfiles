@@ -1,0 +1,67 @@
+! .Xresources
+! author: Stephen Demos
+
+! change term name
+xterm*termName: xterm-256color
+
+! transparency - true or false (default)
+xterm*transparent: false
+
+! tint with any color
+!	some nice listings are at:
+!		http://www.nisrv.com/drupal/?q=node/11
+!		http://htmlgoodies.com/tutorials/colors/article.php/3478921
+! xterm*tintColor: Blue
+
+! shading - 0 to 99 darkens, 101 to 200 lightens
+!	Dont use with tintColor; just use a darker or lighter color instead
+xterm*shading: 40
+
+! scrolback buffer lines - 65535 is max on most machines (64 is default)
+!xterm*saveLines: 24000
+
+! font color (default is black)
+xterm*foreground: White
+
+! background color (prior to tinting) (default is white)
+xterm*background: #080808
+
+! fonts
+!xterm*font: xft:Bitstream Vera Sans Mono:pixelsize=11:antialias=false:hinting=true
+!xterm*boldFont: xft:Bitstream Vera Sans Mono:bold:pixelsize=11:antialias=false:hinting=true
+!xterm*font: xft:Liberation Mono:pixelsize=11:antialias=false:hinting=true
+!xterm*boldFont: xft:Liberation Mono:bold:pixelsize=11:antialias=false:hinting=true
+!xterm*font: xft:inconsolata:pixelsize=12:antialias=false:hinting=true
+!xterm*boldFont: xft:incolsolata:bold:pixelsize=12:antialias=false:hinting=true
+
+! fonts for xterm
+xterm*faceName: Liberation Mono:size=8:antialias=false:hinting=true
+xterm*font: 7x13
+
+! fuck the scroll bar
+xterm*scrollBar: false
+
+! add some perl extensions
+xterm*perl-ext-common: default, matcher
+xterm*urlLauncher: google-chrome
+xterm*matcher*button: 1
+
+! make the lines save for a while
+xterm*saveLines: 4095
+
+xterm*color0:       #3f3f3f
+xterm*color1:       #903030
+xterm*color2:       #00b45a
+xterm*color3:       #bfbf00
+xterm*color4:       #2090e0
+xterm*color5:       #dc8cc3
+xterm*color6:       #60c0c0
+xterm*color7:       #ececec
+xterm*color8:       #709080
+xterm*color9:       #e04040
+xterm*color10:      #4def4d
+xterm*color11:      #f0df8f
+xterm*color12:      #4186de
+xterm*color13:      #ec93d3
+xterm*color14:      #93e0e3
+xterm*color15:      #ffffff
