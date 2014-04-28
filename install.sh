@@ -15,6 +15,7 @@ then
   if [ "$1" == "-h" || "$1" == "--help"]
   then
     echo "usage: ./install.sh [--no-oh-my-zsh] [-h] [--help]"
+    exit
   fi
 fi
 
@@ -29,11 +30,7 @@ then
   }
 fi
 
-echo "Linking Files"
-ln -sf ~/.genconfig/.vim_backup ~/.vim
-ln -sf ~/.genconfig/.xmonad_git ~/.xmonad
-ln -f ~/.genconfig/.*rc* ~/
-ln -f ~/.genconfig/.Xdefaults ~/
+./resymlink.sh
 
 hash git >/dev/null && /usr/bin/env git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle || {
   echo "git not installed (how did you get here?)"
