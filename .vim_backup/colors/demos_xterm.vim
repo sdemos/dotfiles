@@ -148,8 +148,8 @@ else
     exec "hi Search         cterm=NONE   ctermfg=" . (196) . " ctermbg=" . (21)
     exec "hi ErrorMsg       cterm=BOLD   ctermfg=" . (232) . " ctermbg=" . (124)
     exec "hi WarningMsg     cterm=BOLD   ctermfg=" . (196) . " ctermbg=" . (21)
-    exec "hi ModeMsg        cterm=BOLD   ctermfg=" . (196) . " ctermbg=" . "NONE"
-    exec "hi MoreMsg        cterm=BOLD   ctermfg=" . (196) . " ctermbg=" . "NONE"
+    exec "hi ModeMsg        cterm=BOLD   ctermfg=" . (44) . " ctermbg=" . "NONE"
+    exec "hi MoreMsg        cterm=BOLD   ctermfg=" . (44) . " ctermbg=" . "NONE"
     exec "hi Question       cterm=BOLD   ctermfg=" . (196) . " ctermbg=" . "NONE"
 
     exec "hi StatusLine     cterm=BOLD   ctermfg=" . (245) . " ctermbg=" . (234)
@@ -181,19 +181,40 @@ else
     exec "hi Visual         cterm=NONE   ctermfg=" . (253) . " ctermbg=" . (61)
 
     exec "hi Comment        cterm=NONE   ctermfg=" . (236)  . " ctermbg=" . "NONE"
-    exec "hi Constant       cterm=NONE   ctermfg=" . (73) . " ctermbg=" . "NONE"
-    exec "hi String         cterm=NONE   ctermfg=" . (215) . " ctermbg=" . "NONE"
-    exec "hi Error          cterm=NONE   ctermfg=" . (79) . " ctermbg=" . (32)
-    exec "hi Identifier     cterm=NONE   ctermfg=" . (53) . " ctermbg=" . "NONE"
-    exec "hi Ignore         cterm=NONE"
-    exec "hi Number         cterm=NONE   ctermfg=" . (69) . " ctermbg=" . "NONE"
-    exec "hi PreProc        cterm=NONE   ctermfg=" . (25) . " ctermbg=" . "NONE"
-    exec "hi Special        cterm=NONE   ctermfg=" . (55) . " ctermbg=" . "NONE"
-    exec "hi SpecialChar    cterm=NONE   ctermfg=" . (55) . " ctermbg=" . (81)
+
+    exec "hi Constant       cterm=NONE   ctermfg=" . (99) . " ctermbg=" . "NONE"
+    exec "hi String         cterm=NONE   ctermfg=" . (149) . " ctermbg=" . "NONE"
+    exec "hi Character      cterm=NONE   ctermfg=" . (142) . " ctermbg=" . "NONE"
+    exec "hi Number         cterm=NONE   ctermfg=" . (99) . " ctermbg=" . "NONE"
+
+    exec "hi Identifier     cterm=NONE   ctermfg=" . (135) . " ctermbg=" . "NONE"
+
     exec "hi Statement      cterm=NONE   ctermfg=" . (31) . " ctermbg=" . "NONE"
-    exec "hi Todo           cterm=BOLD   ctermfg=" . (16) . " ctermbg=" . (57)
+    exec "hi Conditional    cterm=NONE   ctermfg=" . (31) . " ctermbg=" . "NONE"
+    exec "hi Repeat         cterm=NONE   ctermfg=" . (31) . " ctermbg=" . "NONE"
+    exec "hi Label          cterm=NONE   ctermfg=" . (31) . " ctermbg=" . "NONE"
+    exec "hi Operator       cterm=NONE   ctermfg=" . (31) . " ctermbg=" . "NONE"
+    exec "hi Keyword        cterm=NONE   ctermfg=" . (31) . " ctermbg=" . "NONE"
+    exec "hi Exception      cterm=NONE   ctermfg=" . (31) . " ctermbg=" . "NONE"
+
+    exec "hi PreProc        cterm=NONE   ctermfg=" . (30) . " ctermbg=" . "NONE"
+
     exec "hi Type           cterm=NONE   ctermfg=" . (35) . " ctermbg=" . "NONE"
+    exec "hi StorageClass   cterm=NONE   ctermfg=" . (35) . " ctermbg=" . "NONE"
+    exec "hi Structure      cterm=NONE   ctermfg=" . (35) . " ctermbg=" . "NONE"
+    exec "hi Typedef        cterm=NONE   ctermfg=" . (35) . " ctermbg=" . "NONE"
+
+    exec "hi Special        cterm=NONE   ctermfg=" . (54) . " ctermbg=" . "NONE"
+    exec "hi SpecialChar    cterm=NONE   ctermfg=" . (142) . " ctermbg=" . "NONE"
+
     exec "hi Underlined     cterm=BOLD   ctermfg=" . (77) . " ctermbg=" . "NONE"
+
+    exec "hi Ignore         cterm=NONE"
+
+    exec "hi Error          cterm=BOLD   ctermfg=" . (232) . " ctermbg=" . (124)
+
+    exec "hi Todo           cterm=BOLD   ctermfg=" . (16) . " ctermbg=" . (57)
+
     exec "hi TaglistTagName cterm=BOLD   ctermfg=" . (39) . " ctermbg=" . "NONE"
 
     if v:version >= 700
