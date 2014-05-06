@@ -2,3 +2,4 @@
 .xmonad_git/xmonad.hi
 .xmonad_git/xmonad.o
 .xmonad_git/xmonad.errors
+.vim_backup/.netrwhist
