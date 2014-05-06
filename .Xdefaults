@@ -27,10 +27,10 @@ URxvt*foreground: White
 URxvt*background: Black
 
 ! fonts
-URxvt*font: xft:Bitstream Vera Sans Mono:pixelsize=11:antialias=false:hinting=true
-URxvt*boldFont: xft:Bitstream Vera Sans Mono:bold:pixelsize=11:antialias=false:hinting=true
-!URxvt*font: xft:Liberation Mono:pixelsize=11:antialias=false:hinting=true
-!URxvt*boldFont: xft:Liberation Nono:bold:pixelsize=11:antialias=false:hinting=true
+!URxvt*font: xft:Bitstream Vera Sans Mono:pixelsize=11:antialias=false:hinting=true
+!URxvt*boldFont: xft:Bitstream Vera Sans Mono:bold:pixelsize=11:antialias=false:hinting=true
+URxvt*font: xft:Liberation Mono:pixelsize=11:antialias=false:hinting=true
+URxvt*boldFont: xft:Liberation Mono:bold:pixelsize=11:antialias=false:hinting=true
 !URxvt*font: xft:inconsolata:pixelsize=11:antialias=false:hinting=true
 !URxvt*boldFont: xft:incolsolata:bold:pixelsize=11:antialias=false:hinting=true
 
@@ -61,3 +61,64 @@ URxvt*color12:      #4186de
 URxvt*color13:      #ec93d3
 URxvt*color14:      #93e0e3
 URxvt*color15:      #ffffff
+
+! change term name
+uxterm*termName: xterm-256color
+
+! transparency - true or false (default)
+uxterm*transparent: false
+
+! tint with any color
+!	some nice listings are at:
+!		http://www.nisrv.com/drupal/?q=node/11
+!		http://htmlgoodies.com/tutorials/colors/article.php/3478921
+! uxterm*tintColor: Blue
+
+! shading - 0 to 99 darkens, 101 to 200 lightens
+!	Don't use with tintColor; just use a darker or lighter color instead
+uxterm*shading: 40
+
+! scrolback buffer lines - 65535 is max on most machines (64 is default)
+uxterm*saveLines: 24000
+
+! font color (default is black)
+uxterm*foreground: White
+
+! background color (prior to tinting) (default is white)
+uxterm*background: Black
+
+! fonts
+!uxterm*font: xft:Bitstream Vera Sans Mono:pixelsize=11:antialias=false:hinting=true
+!uxterm*boldFont: xft:Bitstream Vera Sans Mono:bold:pixelsize=11:antialias=false:hinting=true
+uxterm*font: xft:Liberation Mono:pixelsize=11:antialias=false:hinting=true
+uxterm*boldFont: xft:Liberation Mono:bold:pixelsize=11:antialias=false:hinting=true
+!uxterm*font: xft:inconsolata:pixelsize=11:antialias=false:hinting=true
+!uxterm*boldFont: xft:incolsolata:bold:pixelsize=11:antialias=false:hinting=true
+
+! fuck the scroll bar
+uxterm*scrollBar: false
+
+! add some perl extensions
+uxterm*perl-ext-common: default, matcher
+uxterm*urlLauncher: google-chrome
+uxterm*matcher*button: 1
+
+! make the lines save for a while
+uxterm*saveLines: 4095
+
+uxterm*color0:       #3f3f3f
+uxterm*color1:       #903030
+uxterm*color2:       #00b45a
+uxterm*color3:       #bfbf00
+uxterm*color4:       #2090e0
+uxterm*color5:       #dc8cc3
+uxterm*color6:       #60c0c0
+uxterm*color7:       #ececec
+uxterm*color8:       #709080
+uxterm*color9:       #e04040
+uxterm*color10:      #4def4d
+uxterm*color11:      #f0df8f
+uxterm*color12:      #4186de
+uxterm*color13:      #ec93d3
+uxterm*color14:      #93e0e3
+uxterm*color15:      #ffffff
