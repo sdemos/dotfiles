@@ -153,10 +153,13 @@ else
     exec "hi Question       cterm=BOLD   ctermfg=" . (196) . " ctermbg=" . "NONE"
 
     exec "hi StatusLine     cterm=BOLD   ctermfg=" . (245) . " ctermbg=" . (234)
+    exec "hi ColorColumn    cterm=BOLD   ctermfg=" . (245) . " ctermbg=" . (234)
     exec "hi User1          cterm=BOLD   ctermfg=" . (28) . " ctermbg=" . (21)
     exec "hi User2          cterm=BOLD   ctermfg=" . (39) . " ctermbg=" . (21)
     exec "hi StatusLineNC   cterm=NONE   ctermfg=" . (244) . " ctermbg=" . (234)
     exec "hi VertSplit      cterm=NONE   ctermfg=" . (244) . " ctermbg=" . (234)
+
+    exec "hi CursorLine     cterm=UNDERLINE   ctermfg=" . (244) . " ctermbg=" . (234)
 
     exec "hi WildMenu       cterm=BOLD   ctermfg=" . (87) . " ctermbg=" . (38)
 
