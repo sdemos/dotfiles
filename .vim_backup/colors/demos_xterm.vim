@@ -11,7 +11,7 @@ if exists("syntax_on")
    syntax reset
 endif
 
-let colors_name = "demos"
+let colors_name = "demos_xterm"
 
 " map a urxvt cube number to an xterm-256 cube number
 fun! <SID>M(a)
@@ -180,7 +180,7 @@ else
     exec "hi Title          cterm=BOLD   ctermfg=" . (196) . " ctermbg=" . "NONE"
     exec "hi Visual         cterm=NONE   ctermfg=" . (253) . " ctermbg=" . (61)
 
-    exec "hi Comment        cterm=NONE   ctermfg=" . (236)  . " ctermbg=" . "NONE"
+    exec "hi Comment        cterm=NONE   ctermfg=" . (237)  . " ctermbg=" . "NONE"
 
     exec "hi Constant       cterm=NONE   ctermfg=" . (99) . " ctermbg=" . "NONE"
     exec "hi String         cterm=NONE   ctermfg=" . (149) . " ctermbg=" . "NONE"
