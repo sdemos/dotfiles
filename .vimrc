@@ -5,7 +5,7 @@
 
 " set 250 color
 set t_Co=256
-
+`
 color demos_xterm
 
 set nocompatible
