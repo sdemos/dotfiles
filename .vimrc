@@ -3,6 +3,9 @@
 " author: Stephen Demos <stphndemos@gmail.com> "
 """"""""""""""""""""""""""""""""""""""""""""""""
 
+" set 250 color
+set t_Co=256
+
 color demos_xterm
 
 set nocompatible
@@ -13,10 +16,6 @@ let maplocalleader = "\\"
 
 " set up pathogen to autoload stuff
 execute pathogen#infect()
-
-" source bundles and vundle
-source ~/.vimrc_vundle
-source ~/.vimrc_bundles
 
 " make editing and sourcing .vimrc easier
 nnoremap <leader>ev :split $MYVIMRC<cr>
