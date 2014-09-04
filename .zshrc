@@ -8,7 +8,6 @@ ZSH=$HOME/.oh-my-zsh
 COMPLETION_WAITING_DOTS="true"
 CASE_SENSITIVE="true"
 ZSH_THEME="demos"
-plugins=(git battery cp colored-man git-extras github lol safe-paste themes tmux systemd yum common-aliases debian gitfast pip python svn virtualenvwrapper wd)
 source $ZSH/oh-my-zsh.sh
 export PATH=$PATH:/usr/lib64/qt-3.3/bin:/usr/local/bin:/usr/bin:/bin:/home/demos/bin:/usr/local/sbin:/usr/sbin:/usr/local/netbeans-8.0rc1/bin:/home/demos/.cabal/bin
 # Lines configured by zsh-newuser-install
@@ -26,13 +25,9 @@ compinit
 
 export EDITOR="vim"
 
-alias ls='ls --color=auto'
 alias py3='python3'
 alias power='acpi'
+unalias ls
+alias ls='ls -G'
 
 export _JAVA_AWT_WM_NONREPARENTING=1
-# hopefully this will make the scrolling function work on startup instead of having to type in the commands every time
-xinput set-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation" 1
-xinput set-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation Button" 2
-xinput set-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation Timeout" 200
-xinput set-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation Axes" 6 7 4 5

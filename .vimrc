@@ -8,6 +8,7 @@ set   t_Co=256
 color demos_xterm
 
 set nocompatible
+filetype plugin indent on
 
 " first, set a leader
 let mapleader = " "
@@ -19,6 +20,8 @@ let maplocalleader = "\\"
 " source bundles and vundle
 "source ~/.vimrc_vundle
 "source ~/.vimrc_bundles
+
+let g:SuperTabDefaultCompletionType = 'context'
 
 " make editing and sourcing .vimrc easier
 nnoremap <leader>ev :split $MYVIMRC<cr>
