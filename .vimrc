@@ -18,8 +18,6 @@ let maplocalleader = "\\"
 " set up pathogen to autoload stuff
 execute pathogen#infect()
 
-let g:SuperTabDefaultCompletionType = 'context'
-
 " make editing and sourcing .vimrc easier
 nnoremap <leader>ev :split $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
