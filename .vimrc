@@ -3,8 +3,9 @@
 " author: Stephen Demos <stphndemos@gmail.com> "
 """"""""""""""""""""""""""""""""""""""""""""""""
 
-set   t_Co=256
-
+" set 250 color
+set t_Co=256
+`
 color demos_xterm
 
 set nocompatible
@@ -15,11 +16,7 @@ let mapleader = " "
 let maplocalleader = "\\"
 
 " set up pathogen to autoload stuff
-"execute pathogen#infect()
-
-" source bundles and vundle
-"source ~/.vimrc_vundle
-"source ~/.vimrc_bundles
+execute pathogen#infect()
 
 let g:SuperTabDefaultCompletionType = 'context'
 

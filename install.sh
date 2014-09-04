@@ -31,8 +31,3 @@ then
 fi
 
 ./resymlink.sh
-
-hash git >/dev/null && /usr/bin/env git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle || {
-  echo "git not installed (how did you get here?)"
-  exit
-}
