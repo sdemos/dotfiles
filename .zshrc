@@ -14,7 +14,7 @@ MAC=
 if [[ $osname == "Linux" ]] then
     # set linux to true (well, really, anything, as long as it exists)
     LINUX=true
-    # when I figure out how to use /etc/os-release to get the NAME, this is where I will set the variables
+    # when I figure out how to use /etc/os-release to get the NAME, this is where I will set the distro variables
 elif [[ $osname == "Darwin" ]] then
     # set mac to true
     MAC=true
@@ -40,7 +40,7 @@ source $ZSH/oh-my-zsh.sh
 # update path with otherwise ignored directories
 if [[ -n $LINUX ]] then
     # path additions for linux
-    export PATH=$PATH:/usr/lib64/qt-3.3/bin:/usr/local/bin:/usr/bin:/bin:/home/demos/bin:/usr/local/sbin:/usr/sbin:/usr/local/netbeans-8.0rc1/bin:/home/demos/.cabal/bin
+    export PATH=/home/demos/.cabal/bin:$PATH:/usr/lib64/qt-3.3/bin:/usr/local/bin:/usr/bin:/bin:/home/demos/bin:/usr/local/sbin:/usr/sbin:/usr/local/netbeans-8.0rc1/bin
 elif [[ -n $MAC ]] then
     # path additions for mac
     # this on is specifically for my intuit dev machine, if I get another mac for whatever reason this needs to change
