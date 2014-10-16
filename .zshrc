@@ -25,16 +25,27 @@ ZSH=$HOME/.oh-my-zsh
 COMPLETION_WAITING_DOTS="true"
 CASE_SENSITIVE="true"
 ZSH_THEME="demos"
+plugins=(git cp colored-man git-extras themes tmux common-aliases zsh-completions)
 if [[ -n $LINUX ]] then
     # set plugins if it's linux
-    plugins=(git battery cp colored-man git-extras github lol safe-paste themes tmux systemd yum common-aliases debian gitfast pip python svn virtualenvwrapper wd)
+    plugins=($plugins cabal battery github lol safe-paste systemd yum debian gitfast pip python svn virtualenvwrapper wd)
+elif [[ -n $MAC ]] then
+    # set other plugins for mac
+    plugins=($plugins brew ttodev)
 fi
 
 # run with the oh-my-zsh settings set above this
 source $ZSH/oh-my-zsh.sh
 
 # update path with otherwise ignored directories
-export PATH=$PATH:/usr/lib64/qt-3.3/bin:/usr/local/bin:/usr/bin:/bin:/home/demos/bin:/usr/local/sbin:/usr/sbin:/usr/local/netbeans-8.0rc1/bin:/home/demos/.cabal/bin
+if [[ -n $LINUX ]] then
+    # path additions for linux
+    export PATH=$PATH:/usr/lib64/qt-3.3/bin:/usr/local/bin:/usr/bin:/bin:/home/demos/bin:/usr/local/sbin:/usr/sbin:/usr/local/netbeans-8.0rc1/bin:/home/demos/.cabal/bin
+elif [[ -n $MAC ]] then
+    # path additions for mac
+    # this on is specifically for my intuit dev machine, if I get another mac for whatever reason this needs to change
+    export PATH=$PATH:/Users/sdemos/ttodev
+fi
 
 # auto-generated lines by zsh-newuser and compinstall
 HISTFILE=~/.histfile
