@@ -69,7 +69,7 @@ alias tmux='tmux -2'
 # alias ls based on os
 if [[ -n $LINUX ]] then
     # set for linux
-    alias ls='ls --color=auto'
+    alias ls='ls --color=auto --classify'
 elif [[ -n $MAC ]] then
     # set for mac
     alias ls='ls -G'
