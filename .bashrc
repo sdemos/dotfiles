@@ -31,8 +31,8 @@ export CVSROOT
 
 
 /bin/zsh
-<<<<<<< HEAD
-logout 
-=======
-logout
->>>>>>> 9690bc99ad90e8564a468009d4e449875ed16188
+if [[ $0 == -* ]]; then
+    logout
+else
+    exit
+fi

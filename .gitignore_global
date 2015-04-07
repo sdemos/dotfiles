@@ -8,3 +8,8 @@ dist
 *.tar*
 *.sqlite
 *.si
+.idea
+*.iml
+log
+.ghci
+.m2

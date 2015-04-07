@@ -1,6 +1,10 @@
 echo "Cloning dotfiles"
-hash git >/dev/null && /usr/bin/env git clone git@github.com:stphndemos/dotfiles.git ~/.genconfig || {
+hash git >/dev/null || {
   echo "git not installed"
+  exit
+}
+hash /usr/bin/env git clone git@github.com:stphndemos/dotfiles.git ~/.genconfig || /usr/bin/env git clone https://github.com/stphndemos/dotfiles.git ~/.genconfig {
+  echo "something went wrong - the error is probably above ^^"
   exit
 }
 
@@ -30,9 +34,4 @@ then
   }
 fi
 
-./resymlink.sh
-
-hash git >/dev/null && /usr/bin/env git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle || {
-  echo "git not installed (how did you get here?)"
-  exit
-}
+~/.genconfig/resymlink.sh
