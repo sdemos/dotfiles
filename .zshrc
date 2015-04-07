@@ -84,7 +84,8 @@ export VIRTUALENVWRAPPER_PYTHON='/usr/bin/python3'
 #source /usr/local/bin/virtualenvwrapper.sh
 
 # make the scrolling on my thinkpad work
-#xinput set-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation" 1
-#xinput set-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation Button" 2
-#xinput set-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation Timeout" 200
-#xinput set-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation Axes" 6 7 4 5
+xinput set-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation" 1
+xinput set-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation Button" 2
+xinput set-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation Timeout" 200
+xinput set-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation Axes" 6 7 4 5
+export JAVA_HOME=/usr/java/latest/
