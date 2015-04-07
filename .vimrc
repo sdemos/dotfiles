@@ -8,14 +8,22 @@ set t_Co=256
 color demos_xterm
 
 set nocompatible
+filetype off
+" use vundle
+" when I modify this, run :PluginInstall!
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'gmarik/Vundle.vim'
+Plugin 'gilligan/vim-lldb'
+Plugin 'mbbill/undotree'
+Plugin 'pbrisbin/vim-syntax-shakespeare'
+Plugin 'groenewege/vim-less'
+call vundle#end()
 filetype plugin indent on
 
 " first, set a leader
 let mapleader = " "
 let maplocalleader = "\\"
-
-" set up pathogen to autoload stuff
-execute pathogen#infect()
 
 " make editing and sourcing .vimrc easier
 nnoremap <leader>ev :split $MYVIMRC<cr>
