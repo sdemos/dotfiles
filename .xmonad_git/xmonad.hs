@@ -10,4 +10,5 @@ main = xmonad $ defaultConfig
     { borderWidth       = 0
     , terminal          = "uxterm" 
     , startupHook       = setWMName "LG3D"
+    --, modMask           = mod4Mask
     }
