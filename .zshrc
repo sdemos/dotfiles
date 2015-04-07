@@ -40,7 +40,7 @@ source $ZSH/oh-my-zsh.sh
 # update path with otherwise ignored directories
 if [[ -n $LINUX ]] then
     # path additions for linux
-    export PATH=/home/demos/.cabal/bin:$PATH:/usr/lib64/qt-3.3/bin:/usr/local/bin:/usr/bin:/bin:/home/demos/bin:/usr/local/sbin:/usr/sbin:/usr/local/netbeans-8.0rc1/bin
+    export PATH=/home/demos/.bin/bin:/home/demos/.cabal/bin:$PATH:/usr/lib64/qt-3.3/bin:/usr/local/bin:/usr/bin:/bin:/home/demos/bin:/usr/local/sbin:/usr/sbin:/usr/local/netbeans-8.0rc1/bin
 elif [[ -n $MAC ]] then
     # path additions for mac
     # this on is specifically for my intuit dev machine, if I get another mac for whatever reason this needs to change
@@ -82,6 +82,9 @@ export _JAVA_AWT_WM_NONREPARENTING=1
 export WORKON_HOME=~/.pythonenvs
 export VIRTUALENVWRAPPER_PYTHON='/usr/bin/python3'
 #source /usr/local/bin/virtualenvwrapper.sh
+
+# for rust
+export LD_LIBRARY_PATH='/usr/local/lib'
 
 # make the scrolling on my thinkpad work
 #xinput set-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation" 1
