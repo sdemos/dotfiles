@@ -28,7 +28,7 @@ ZSH_THEME="demos"
 plugins=(git cp colored-man git-extras themes tmux common-aliases zsh-completions)
 if [[ -n $LINUX ]] then
     # set plugins if it's linux
-    plugins=($plugins cabal systemd yum debian pip python svn virtualenvwrapper)
+    plugins=($plugins cabal systemd yum debian pip python)
 elif [[ -n $MAC ]] then
     # set other plugins for mac
     plugins=($plugins brew ttodev)
