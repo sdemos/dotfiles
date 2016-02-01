@@ -8,7 +8,7 @@ import XMonad.Hooks.SetWMName
 
 main = xmonad $ defaultConfig
     { borderWidth       = 0
-    , terminal          = "uxterm" 
+    , terminal          = "urxvt"
     , startupHook       = setWMName "LG3D"
     --, modMask           = mod4Mask
     }
