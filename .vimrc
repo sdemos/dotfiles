@@ -14,10 +14,12 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
-Plugin 'gilligan/vim-lldb'
-Plugin 'mbbill/undotree'
+"Plugin 'gilligan/vim-lldb'
+"Plugin 'mbbill/undotree'
 Plugin 'pbrisbin/vim-syntax-shakespeare'
 Plugin 'groenewege/vim-less'
+Plugin 'the-lambda-church/coquille'
+Plugin 'def-lkb/vimbufsync'
 call vundle#end()
 filetype plugin indent on
 
@@ -41,6 +43,7 @@ nnoremap <leader>lh :nohlsearch<CR>
 inoremap jk <esc>
 
 " set some general settings for all files
+set wildmenu
 set number
 set relativenumber
 set laststatus=2
@@ -59,6 +62,17 @@ set softtabstop=4
 set scrolloff=5
 set smarttab
 set et
+
+" Maps Coquille commands to <F2> (Undo), <F3> (Next), <F4> (ToCursor)
+au FileType coq CoqLaunch
+au FileType coq call coquille#FNMapping()
+au Filetype coq nnoremap <buffer> <leader>n :CoqNext<cr>
+au Filetype coq nnoremap <buffer> <leader>u :CoqUndo<cr>
+au Filetype coq nnoremap <buffer> <leader>t :CoqToCursor<cr>
+au Filetype coq nnoremap <buffer> <leader>k :CoqKill<cr>
+au Filetype coq nnoremap <buffer> <leader>d :GotoDot<cr>
+au Filetype coq set shiftwidth=2
+au Filetype coq set tabstop=2
 
 " Autocommands for python
 augroup filetype_python
