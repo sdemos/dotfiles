@@ -4,3 +4,4 @@
 .xmonad_git/xmonad.o
 .xmonad_git/xmonad.errors
 .vim_backup/.netrwhist
+.vim_backup/bundle
