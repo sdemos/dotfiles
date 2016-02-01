@@ -2,123 +2,54 @@
 ! author: Stephen Demos
 
 ! change term name
-URxvt*termName: rxvt-256color
+urxvt*termName: rxvt-unicode-256color
 
 ! transparency - true or false (default)
-URxvt*transparent: false
+urxvt*transparent: false
 
 ! tint with any color
 !	some nice listings are at:
 !		http://www.nisrv.com/drupal/?q=node/11
 !		http://htmlgoodies.com/tutorials/colors/article.php/3478921
-! URxvt*tintColor: Blue
+! urxvt*tintColor: Blue
 
 ! shading - 0 to 99 darkens, 101 to 200 lightens
-!	Don't use with tintColor; just use a darker or lighter color instead
-URxvt*shading: 40
+!	Dont use with tintColor; just use a darker or lighter color instead
+urxvt*shading: 40
 
 ! scrolback buffer lines - 65535 is max on most machines (64 is default)
-URxvt*saveLines: 24000
+urxvt*saveLines: 4096
 
 ! font color (default is black)
-URxvt*foreground: White
+urxvt*foreground: White
 
 ! background color (prior to tinting) (default is white)
-URxvt*background: Black
+urxvt*background: #080808
 
-! fonts
-!URxvt*font: xft:Bitstream Vera Sans Mono:pixelsize=11:antialias=false:hinting=true
-!URxvt*boldFont: xft:Bitstream Vera Sans Mono:bold:pixelsize=11:antialias=false:hinting=true
-URxvt*font: xft:Liberation Mono:pixelsize=11:antialias=false:hinting=true
-URxvt*boldFont: xft:Liberation Mono:bold:pixelsize=11:antialias=false:hinting=true
-!URxvt*font: xft:inconsolata:pixelsize=11:antialias=false:hinting=true
-!URxvt*boldFont: xft:incolsolata:bold:pixelsize=11:antialias=false:hinting=true
+! fonts for urxvt
+urxvt*font: xft:inconsolata:pixelsize=13:antialias=false:hinting=true
+! this gets rid of bold fonts
+urxvt*boldFont:
 
 ! fuck the scroll bar
-URxvt*scrollBar: false
-
-! add some perl extensions
-URxvt*perl-ext-common: default, matcher
-URxvt*urlLauncher: google-chrome
-URxvt*matcher*button: 1
+urxvt*scrollBar: false
 
 ! make the lines save for a while
-URxvt*saveLines: 4095
+urxvt*saveLines: 4095
 
-URxvt*color0:       #3f3f3f
-URxvt*color1:       #903030
-URxvt*color2:       #00b45a
-URxvt*color3:       #bfbf00
-URxvt*color4:       #2090e0
-URxvt*color5:       #dc8cc3
-URxvt*color6:       #60c0c0
-URxvt*color7:       #ececec
-URxvt*color8:       #709080
-URxvt*color9:       #e04040
-URxvt*color10:      #4def4d
-URxvt*color11:      #f0df8f
-URxvt*color12:      #4186de
-URxvt*color13:      #ec93d3
-URxvt*color14:      #93e0e3
-URxvt*color15:      #ffffff
-
-! change term name
-uxterm*termName: xterm-256color
-
-! transparency - true or false (default)
-uxterm*transparent: false
-
-! tint with any color
-!	some nice listings are at:
-!		http://www.nisrv.com/drupal/?q=node/11
-!		http://htmlgoodies.com/tutorials/colors/article.php/3478921
-! uxterm*tintColor: Blue
-
-! shading - 0 to 99 darkens, 101 to 200 lightens
-!	Don't use with tintColor; just use a darker or lighter color instead
-uxterm*shading: 40
-
-! scrolback buffer lines - 65535 is max on most machines (64 is default)
-uxterm*saveLines: 24000
-
-! font color (default is black)
-uxterm*foreground: White
-
-! background color (prior to tinting) (default is white)
-uxterm*background: Black
-
-! fonts
-!uxterm*font: xft:Bitstream Vera Sans Mono:pixelsize=11:antialias=false:hinting=true
-!uxterm*boldFont: xft:Bitstream Vera Sans Mono:bold:pixelsize=11:antialias=false:hinting=true
-uxterm*font: xft:Liberation Mono:pixelsize=11:antialias=false:hinting=true
-uxterm*boldFont: xft:Liberation Mono:bold:pixelsize=11:antialias=false:hinting=true
-!uxterm*font: xft:inconsolata:pixelsize=11:antialias=false:hinting=true
-!uxterm*boldFont: xft:incolsolata:bold:pixelsize=11:antialias=false:hinting=true
-
-! fuck the scroll bar
-uxterm*scrollBar: false
-
-! add some perl extensions
-uxterm*perl-ext-common: default, matcher
-uxterm*urlLauncher: google-chrome
-uxterm*matcher*button: 1
-
-! make the lines save for a while
-uxterm*saveLines: 4095
-
-uxterm*color0:       #3f3f3f
-uxterm*color1:       #903030
-uxterm*color2:       #00b45a
-uxterm*color3:       #bfbf00
-uxterm*color4:       #2090e0
-uxterm*color5:       #dc8cc3
-uxterm*color6:       #60c0c0
-uxterm*color7:       #ececec
-uxterm*color8:       #709080
-uxterm*color9:       #e04040
-uxterm*color10:      #4def4d
-uxterm*color11:      #f0df8f
-uxterm*color12:      #4186de
-uxterm*color13:      #ec93d3
-uxterm*color14:      #93e0e3
-uxterm*color15:      #ffffff
+urxvt*color0:       #3f3f3f
+urxvt*color1:       #903030
+urxvt*color2:       #00b45a
+urxvt*color3:       #bfbf00
+urxvt*color4:       #2090e0
+urxvt*color5:       #dc8cc3
+urxvt*color6:       #60c0c0
+urxvt*color7:       #ececec
+urxvt*color8:       #709080
+urxvt*color9:       #e04040
+urxvt*color10:      #4def4d
+urxvt*color11:      #f0df8f
+urxvt*color12:      #4186de
+urxvt*color13:      #ec93d3
+urxvt*color14:      #93e0e3
+urxvt*color15:      #ffffff
