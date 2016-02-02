@@ -13,3 +13,5 @@ dist
 log
 .ghci
 .m2
+cscope.out
+.stack-work
