@@ -28,7 +28,7 @@ ZSH_THEME="demos"
 plugins=(git cp colored-man git-extras themes tmux common-aliases zsh-completions)
 if [[ -n $LINUX ]] then
     # set plugins if it's linux
-    plugins=($plugins cabal systemd yum debian pip python svn virtualenvwrapper)
+    plugins=($plugins cabal systemd yum debian pip python svn virtualenvwrapper stack)
 elif [[ -n $MAC ]] then
     # set other plugins for mac
     plugins=($plugins brew ttodev)
@@ -40,7 +40,7 @@ source $ZSH/oh-my-zsh.sh
 # update path with otherwise ignored directories
 if [[ -n $LINUX ]] then
     # path additions for linux
-    export PATH=/home/demos/.bin/bin:/home/demos/.cabal/bin:$PATH:/usr/lib64/qt-3.3/bin:/usr/local/bin:/usr/bin:/bin:/home/demos/bin:/usr/local/sbin:/usr/sbin:/usr/local/netbeans-8.0rc1/bin
+    export PATH=/home/demos/.local/bin:/home/demos/.haskell/ghc-mod/.cabal-sandbox/bin:/home/demos/.haskell/.cabal-sandbox/bin:/home/demos/.bin/bin:/home/demos/.cabal/bin:$PATH:/usr/lib64/qt-3.3/bin:/usr/local/bin:/usr/bin:/bin:/home/demos/bin:/usr/local/sbin:/usr/sbin:/usr/local/netbeans-8.0rc1/bin
 elif [[ -n $MAC ]] then
     # path additions for mac
     # this on is specifically for my intuit dev machine, if I get another mac for whatever reason this needs to change

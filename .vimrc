@@ -14,10 +14,8 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
-Plugin 'gilligan/vim-lldb'
-Plugin 'mbbill/undotree'
 Plugin 'pbrisbin/vim-syntax-shakespeare'
-Plugin 'groenewege/vim-less'
+Plugin 'raichoo/purescript-vim'
 call vundle#end()
 filetype plugin indent on
 
@@ -32,10 +30,6 @@ nnoremap <leader>sv :source $MYVIMRC<cr>
 " make writing multi-line abbrevs easier
 vnoremap <C-c> :s/^/\\\<\C\R\>/<CR>:nohlsearch<CR>
 vnoremap <C-A-c> :s/\\<CR[>]//<CR>:nohlsearch<CR>
-
-" I hate search hilighting, but it is useful
-nnoremap <leader>hl :hlsearch<CR>
-nnoremap <leader>lh :nohlsearch<CR>
 
 " make it easier to get into normal mode
 inoremap jk <esc>
@@ -53,12 +47,16 @@ set autoindent
 set showmode
 set listchars=tab:>-,trail:-,eol:$,nbsp:%,
 syntax on
-set tabstop=4
+set tabstop=8
 set shiftwidth=4
 set softtabstop=4
 set scrolloff=5
 set smarttab
 set et
+set lazyredraw
+set ttyfast
+
+nnoremap <leader>c :setlocal spell spelllang=en_us<cr>
 
 " Autocommands for python
 augroup filetype_python
@@ -89,6 +87,10 @@ augroup filetype_haskell
     autocmd!
     autocmd FileType haskell nnoremap <buffer> <localleader>c I-- <esc>
     autocmd FileType haskell nnoremap <buffer> <localleader>u ^xxx
+    autocmd BufEnter *.hs set formatprg=pointfree\ --stdin
+    autocmd FileType haskell nnoremap <buffer> <F1> :HdevtoolsType<CR>
+    autocmd FileType haskell nnoremap <buffer> <silent> <F2> :HdevtoolsClear<CR>
+    autocmd FileType haskell nnoremap <buffer> <silent> <F3> :HdevtoolsInfo<CR>
 augroup END
 
 augroup filetype_make
