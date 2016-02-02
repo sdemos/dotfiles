@@ -21,8 +21,7 @@ urxvt*foreground: White
 urxvt*background: #080808
 
 ! fonts for urxvt
-urxvt*font: xft:inconsolata:pixelsize=13:antialias=false:hinting=true
-! this gets rid of bold fonts
+urxvt*font: xft:Liberation Mono:pixelsize=11:antialias=false:hinting=true
 urxvt*boldFont:
 
 ! fuck the scroll bar
