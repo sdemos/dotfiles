@@ -28,7 +28,7 @@ ZSH_THEME="demos"
 plugins=(git cp colored-man git-extras themes tmux common-aliases zsh-completions)
 if [[ -n $LINUX ]] then
     # set plugins if it's linux
-    plugins=($plugins cabal systemd yum debian pip python svn virtualenvwrapper stack)
+    plugins=($plugins cabal pip python stack)
 elif [[ -n $MAC ]] then
     # set other plugins for mac
     plugins=($plugins brew ttodev)
@@ -86,8 +86,4 @@ export VIRTUALENVWRAPPER_PYTHON='/usr/bin/python3'
 # for rust
 export LD_LIBRARY_PATH='/usr/local/lib'
 
-# make the scrolling on my thinkpad work
-#xinput set-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation" 1
-#xinput set-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation Button" 2
-#xinput set-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation Timeout" 200
-#xinput set-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation Axes" 6 7 4 5
+export JAVA_HOME=/usr/java/latest/
