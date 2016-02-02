@@ -7,18 +7,12 @@ urxvt*termName: rxvt-unicode-256color
 ! transparency - true or false (default)
 urxvt*transparent: false
 
-! tint with any color
-!	some nice listings are at:
-!		http://www.nisrv.com/drupal/?q=node/11
-!		http://htmlgoodies.com/tutorials/colors/article.php/3478921
-! urxvt*tintColor: Blue
-
 ! shading - 0 to 99 darkens, 101 to 200 lightens
 !	Dont use with tintColor; just use a darker or lighter color instead
 urxvt*shading: 40
 
 ! scrolback buffer lines - 65535 is max on most machines (64 is default)
-urxvt*saveLines: 4096
+urxvt*saveLines: 2048
 
 ! font color (default is black)
 urxvt*foreground: White
