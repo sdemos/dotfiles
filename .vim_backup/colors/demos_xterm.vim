@@ -88,7 +88,7 @@ exec "hi SpecialKey     cterm=BOLD   ctermfg=" . (55) . " ctermbg=" . "NONE"
 exec "hi Title          cterm=BOLD   ctermfg=" . (196) . " ctermbg=" . "NONE"
 exec "hi Visual         cterm=NONE   ctermfg=" . (253) . " ctermbg=" . (61)
 
-exec "hi Comment        cterm=NONE   ctermfg=" . (237)  . " ctermbg=" . "NONE"
+exec "hi Comment        cterm=NONE   ctermfg=" . (238)  . " ctermbg=" . "NONE"
 
 exec "hi Constant       cterm=NONE   ctermfg=" . (99) . " ctermbg=" . "NONE"
 exec "hi String         cterm=NONE   ctermfg=" . (149) . " ctermbg=" . "NONE"

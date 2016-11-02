@@ -7,7 +7,6 @@
 set t_Co=256
 color demos_xterm
 
-set nocompatible
 filetype off
 " use vundle
 " when I modify this, run :PluginInstall!
@@ -18,51 +17,41 @@ Plugin 'gmarik/Vundle.vim'
 "Plugin 'mbbill/undotree'
 Plugin 'pbrisbin/vim-syntax-shakespeare'
 Plugin 'groenewege/vim-less'
-Plugin 'def-lkb/vimbufsync'
 Plugin 'the-lambda-church/coquille'
-Plugin 'raichoo/purescript-vim'
+Plugin 'def-lkb/vimbufsync'
+Plugin 'fatih/vim-go'
 call vundle#end()
 filetype plugin indent on
 
 " first, set a leader
-let mapleader = " "
+let mapleader = "'"
 let maplocalleader = "\\"
 
 " make editing and sourcing .vimrc easier
 nnoremap <leader>ev :split $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
 
-" make writing multi-line abbrevs easier
-vnoremap <C-c> :s/^/\\\<\C\R\>/<CR>:nohlsearch<CR>
-vnoremap <C-A-c> :s/\\<CR[>]//<CR>:nohlsearch<CR>
+" I hate search hilighting, but it is useful
+nnoremap <leader>hl :hlsearch<CR>
+nnoremap <leader>lh :nohlsearch<CR>
 
 " make it easier to get into normal mode
 inoremap jk <esc>
 
 " set some general settings for all files
-set wildmenu
 set number
 set relativenumber
-set laststatus=2
-set backspace=indent,eol,start
 set nowrap
-set mouse=a
 set ruler
 set showcmd
-set autoindent
 set showmode
 set listchars=tab:>-,trail:-,eol:$,nbsp:%,
 syntax on
-set tabstop=8
+set tabstop=4
 set shiftwidth=4
 set softtabstop=4
 set scrolloff=5
-set smarttab
 set et
-set lazyredraw
-set ttyfast
-
-nnoremap <leader>c :setlocal spell spelllang=en_us<cr>
 
 " Maps Coquille commands to <F2> (Undo), <F3> (Next), <F4> (ToCursor)
 au FileType coq CoqLaunch
@@ -104,13 +93,22 @@ augroup filetype_haskell
     autocmd!
     autocmd FileType haskell nnoremap <buffer> <localleader>c I-- <esc>
     autocmd FileType haskell nnoremap <buffer> <localleader>u ^xxx
-    autocmd BufEnter *.hs set formatprg=pointfree\ --stdin
-    autocmd FileType haskell nnoremap <buffer> <F1> :HdevtoolsType<CR>
-    autocmd FileType haskell nnoremap <buffer> <silent> <F2> :HdevtoolsClear<CR>
-    autocmd FileType haskell nnoremap <buffer> <silent> <F3> :HdevtoolsInfo<CR>
 augroup END
 
 augroup filetype_make
     autocmd!
     autocmd FileType make :set noexpandtab
+augroup END
+
+augroup filetype_golang
+    autocmd!
+    autocmd FileType go let g:go_highlight_functions = 1
+    autocmd FileType go let g:go_highlight_methods = 1
+    autocmd FileType go let g:go_highlight_structs = 1
+    autocmd FileType go let g:go_highlight_interfaces = 1
+    autocmd FileType go let g:go_highlight_operators = 1
+    autocmd FileType go let g:go_highlight_build_constraints = 1
+    autocmd FileType go let g:go_play_open_browser = 0
+    autocmd FileType go let g:go_fmt_autosave = 0
+    autocmd FileType go set equalprg=gofmt
 augroup END
