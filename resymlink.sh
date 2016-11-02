@@ -1,8 +1,11 @@
-echo "Linking Files"
+#!/bin/bash -e
+
+echo "Linking Directories"
 ln -sfT ~/.genconfig/vim ~/.vim
 ln -sfT ~/.genconfig/xmonad ~/.xmonad
 ln -sfT ~/.genconfig/vim ~/.config/nvim
 
+echo "Linking Files"
 mkdir -p ~/.ssh
 mkdir -p ~/.stack
 ln -f ~/.genconfig/sshconfig ~/.ssh/config
