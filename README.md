@@ -1,4 +1,8 @@
 dotfiles
 ========
 
-get with curl -L https://github.com/stphndemos/dotfiles/raw/master/install.sh | sh
+Download this with
+
+```bash
+curl -L https://github.com/stphndemos/dotfiles/raw/master/install.sh | sh
+```
