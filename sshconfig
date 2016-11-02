@@ -1,0 +1,31 @@
+Host f
+    Hostname fangorn.csh.rit.edu
+    User demos
+
+Host cs
+    Hostname glados.cs.rit.edu
+    User sxd4303
+
+Host b
+    Hostname benzene.student.rit.edu
+    User demos
+
+Host csh
+    Hostname richardnixos.csh.rit.edu
+    User demos
+
+Host j
+    Hostname 10.37.49.28
+    User sdemos1
+    ProxyCommand corkscrew 127.0.0.1 8888 %h %p
+
+Host i imre
+    Hostname fangorn.csh.rit.edu
+    User demos
+    Port 8111
+    ForwardX11Trusted yes
+
+Host p
+    Hostname 192.168.1.143
+    User pi
+

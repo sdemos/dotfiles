@@ -2,6 +2,13 @@ echo "Linking Files"
 ln -sfT ~/.genconfig/vim ~/.vim
 ln -sfT ~/.genconfig/xmonad ~/.xmonad
 ln -sfT ~/.genconfig/vim ~/.config/nvim
+
+mkdir -p ~/.ssh
+mkdir -p ~/.stack
+ln -f ~/.genconfig/sshconfig ~/.ssh/config
+ln -f ~/.genconfig/stackconfig.yaml ~/.stack/config.yaml
+
+ln -f ~/.genconfig/dmrc ~/.dmrc
 ln -f ~/.genconfig/fehbg ~/.fehbg
 ln -f ~/.genconfig/gitconfig ~/.gitconfig
 ln -f ~/.genconfig/gitignore_global ~/.gitignore_global
