@@ -3,6 +3,8 @@
 echo "Linking Directories"
 ln -sfT ~/.genconfig/vim ~/.vim
 ln -sfT ~/.genconfig/xmonad ~/.xmonad
+
+mkdir -p ~/.config
 ln -sfT ~/.genconfig/vim ~/.config/nvim
 
 echo "Linking Files"
