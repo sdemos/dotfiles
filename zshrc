@@ -28,7 +28,7 @@ ZSH_THEME="demos"
 plugins=(git cp colored-man git-extras themes tmux common-aliases zsh-completions)
 if [[ -n $LINUX ]] then
     # set plugins if it's linux
-    plugins=($plugins cabal pip python stack)
+    plugins=($plugins cabal systemd yum debian pip python)
 elif [[ -n $MAC ]] then
     # set other plugins for mac
     plugins=($plugins brew ttodev)
@@ -40,7 +40,7 @@ source $ZSH/oh-my-zsh.sh
 # update path with otherwise ignored directories
 if [[ -n $LINUX ]] then
     # path additions for linux
-    export PATH=/home/demos/.local/bin:/home/demos/.haskell/ghc-mod/.cabal-sandbox/bin:/home/demos/.haskell/.cabal-sandbox/bin:/home/demos/.bin/bin:/home/demos/.cabal/bin:$PATH:/usr/lib64/qt-3.3/bin:/usr/local/bin:/usr/bin:/bin:/home/demos/bin:/usr/local/sbin:/usr/sbin:/usr/local/netbeans-8.0rc1/bin
+    export PATH=/home/demos/.local/bin:/home/demos/.bin/bin:/home/demos/.cabal/bin:$PATH:/usr/lib64/qt-3.3/bin:/usr/local/bin:/usr/bin:/bin:/home/demos/bin:/usr/local/sbin:/usr/sbin:/usr/local/netbeans-8.0rc1/bin
 elif [[ -n $MAC ]] then
     # path additions for mac
     # this on is specifically for my intuit dev machine, if I get another mac for whatever reason this needs to change
@@ -57,14 +57,15 @@ autoload -Uz compinit
 compinit
 
 # set my editor to vim (for tools like sudoedit)
-export EDITOR="vim"
+export EDITOR="nvim"
+alias vim="nvim"
 
 # Aliases to make things easier
 alias py3='python3'
 alias power='acpi'
 
 # Alias tmux to handle 256 colors
-alias tmux='tmux -2'
+alias tmux='TERM=xterm-256color tmux -2'
 
 # alias ls based on os
 if [[ -n $LINUX ]] then
@@ -87,3 +88,7 @@ export VIRTUALENVWRAPPER_PYTHON='/usr/bin/python3'
 export LD_LIBRARY_PATH='/usr/local/lib'
 
 export JAVA_HOME=/usr/java/latest/
+
+# for go...sigh
+export GOPATH=/home/demos/.gopath
+export PATH=$PATH:$GOPATH/bin

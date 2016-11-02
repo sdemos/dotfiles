@@ -1,0 +1,7 @@
+[core]
+	excludesfile = /home/demos/.gitignore_global
+[user]
+	name = Stephen Demos
+	email = stphndemos@gmail.com
+[push]
+	default = simple

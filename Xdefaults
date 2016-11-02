@@ -11,9 +11,6 @@ urxvt*transparent: false
 !	Dont use with tintColor; just use a darker or lighter color instead
 urxvt*shading: 40
 
-! scrolback buffer lines - 65535 is max on most machines (64 is default)
-urxvt*saveLines: 2048
-
 ! font color (default is black)
 urxvt*foreground: White
 
@@ -21,7 +18,7 @@ urxvt*foreground: White
 urxvt*background: #080808
 
 ! fonts for urxvt
-urxvt*font: xft:Liberation Mono:pixelsize=11:antialias=false:hinting=true
+urxvt*font: xft:Terminus:pixelsize=11:antialias=false:hinting=true
 urxvt*boldFont:
 
 ! fuck the scroll bar
@@ -29,6 +26,11 @@ urxvt*scrollBar: false
 
 ! make the lines save for a while
 urxvt*saveLines: 4095
+
+! change font size on the fly
+urxvt*perl-ext-common: default,font-size
+urxvt*keysym*C-Up:     font-size:increase
+urxvt*keysym*C-Down:   font-size:decrease
 
 urxvt*color0:       #3f3f3f
 urxvt*color1:       #903030
