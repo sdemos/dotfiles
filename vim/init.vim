@@ -1,1 +1,1 @@
-/home/demos/.vimrc
+/home/demos/.genconfig/vimrc
